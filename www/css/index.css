@@ -78,11 +78,14 @@ h1 {
     text-align:center;
 }
 
+p {
+	font-size:20px;
+}
+
 .event {
     border-radius:4px;
     -webkit-border-radius:4px;
     color:#FFFFFF;
-    font-size:24pxpx;
     margin:0px 30px;
     padding:2px 0px;
 }
