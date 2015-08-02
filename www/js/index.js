@@ -34,6 +34,7 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
+        addContact("Max Mustermann", "01349823");
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
@@ -45,5 +46,10 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
+    },
+
+    addContact: function(name, phoneNumber) {
+        var contact = navigator.contacts.create({"displayName": name});
+        contact.save();
     }
 };
