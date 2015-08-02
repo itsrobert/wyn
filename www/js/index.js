@@ -50,6 +50,10 @@ var app = {
 
     addContact: function(name, phoneNumber) {
         var contact = navigator.contacts.create({"displayName": name});
+        var name = new ContactName();
+        name.givenName = "name";
+        contact.name = name;
         contact.save();
+        allert("kontakt hinzugefügt");
     }
 };
